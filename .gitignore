@@ -1,0 +1,75 @@
+# =========================================
+# VVA — Vietnamese Voice Assistant
+# .gitignore
+# =========================================
+
+# ----- Python -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+
+# ----- Virtual Environments -----
+venv/
+.venv/
+livekit/venv/
+rag_agent/venv/
+
+# ----- Model files (quá lớn để upload) -----
+# LLM models (.rkllm)
+*.rkllm
+!rkllama/models/ModelName (example)/model.rkllm
+
+# TTS models (.onnx) — chỉ ignore file lớn trong rag_agent
+rag_agent/*.onnx
+
+# Piper TTS binary + libs (tải riêng cho từng kiến trúc)
+piper/
+
+# Các định dạng model khác
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.gguf
+*.h5
+*.tflite
+*.tar.gz
+
+# ----- FAISS vector store (tự tạo lại bằng ingest.py) -----
+rag_agent/vector_store/
+
+# ----- Audio/Debug files -----
+*.wav
+rag_agent/debug_audio.wav
+
+# ----- Chat history (dữ liệu cá nhân) -----
+rag_agent/chat_history.md
+
+# ----- Debug/test scripts -----
+rag_agent/debug_langchain.py
+rag_agent/list_devices.py
+rag_agent/test_w.py
+
+# ----- IDE / Editor -----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ----- OS -----
+Thumbs.db
+.DS_Store
+
+# ----- Logs -----
+*.log
+
+# ----- Gemini artifacts -----
+.gemini/

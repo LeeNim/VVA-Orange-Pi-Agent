@@ -1,0 +1,6 @@
+This is a test document for the RAG agent.
+The agent uses FAISS for vector retrieval.
+It connects to a local Whisper server for speech-to-text.
+It uses a local LLM for generation.
+The capital of France is Paris.
+The capital of Vietnam is Hanoi.
